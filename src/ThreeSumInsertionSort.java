@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class ThreeSumInsertionSort {
 
+    //TODO: Finish ThreeSumInsertionSort using insertionsort instead of array sort.
     public static int count(int[] a) {
         int count = 0;
-        //TODO: Finish ThreeSumInsertionSort using insertionsort instead of array sort.
 
         return count;
     }
