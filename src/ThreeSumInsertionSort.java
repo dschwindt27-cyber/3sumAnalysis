@@ -1,14 +1,27 @@
 import edu.princeton.cs.algs4.In;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
 public class ThreeSumInsertionSort {
 
-    //TODO: Finish ThreeSumInsertionSort using insertionsort instead of array sort.
+
     public static int count(int[] a) {
         int count = 0;
+        int n = a.length;
+        //TODO: Finish ThreeSumInsertionSort using insertionsort instead of array sort.
+        insertionSort(a);
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int target = -(a[i] + a[j]);
+                int k = Arrays.binarySearch(a, j + 1, n, target);
+                if (k > j) {
+                    count++;
+                }
+            }
+        }
 
         return count;
     }
